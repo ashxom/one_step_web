@@ -2,6 +2,12 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
+    // The problem-section transition is reversible: scrolling back up restores
+    // the original document cards rather than leaving them blurred.
+    if (entry.target.classList.contains('clarity-message')) {
+      entry.target.classList.toggle('is-visible', entry.isIntersecting);
+      return;
+    }
     if (entry.isIntersecting) entry.target.classList.add('is-visible');
   });
 }, { threshold: 0.12 });

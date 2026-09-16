@@ -41,3 +41,8 @@ footer { min-height:170px; padding:45px max(28px,calc((100vw - 1290px)/2)); back
 @media (max-width: 880px) { .nav-label { display:none; } }
 .format-pills { display:flex; gap:8px; flex-wrap:wrap; margin-top:25px; }.format-pills span { color:#d8e4ff; border:1px solid rgba(177,201,255,.35); background:rgba(114,151,238,.15); border-radius:99px; padding:9px 13px; font-size:12px; font-weight:700; letter-spacing:-.04em; }
 @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; scroll-behavior:auto!important; }.reveal { opacity:1; transform:none; filter:none; }.story-caption { transition:none; }.story-caption:not(:first-of-type),.scene-panel:not(:first-child) { display:none; }.paper { filter:none!important; opacity:1!important; } }
+/* Give the “complex documents” scene enough reading time and make its change reversible. */
+@media (min-width: 881px) { .problem { min-height:140vh; } }
+@media (max-width: 880px) { .problem { min-height:1100px; } }
+.paper { transition:filter 1.8s ease,opacity 1.8s ease,transform 1.8s ease; }
+.problem:has(.clarity-message.is-visible) .paper { filter:blur(4px); opacity:.45; transform:scale(.96); }
