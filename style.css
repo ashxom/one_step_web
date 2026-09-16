@@ -55,3 +55,5 @@ footer { min-height:170px; padding:45px max(28px,calc((100vw - 1290px)/2)); back
 .action-phone-wrap::after { width:300px; height:300px; left:50%; top:50%; transform:translate(-50%,-50%); border-color:#e6efff; }
 .action-phone { position:relative; z-index:1; }.orbit { z-index:2; }.orbit-one::before { display:none; }
 @media (max-width: 880px) { .story-caption > p:not(.eyebrow) { font-size:16px; }.action-phone-wrap::before { width:340px; height:340px; }.action-phone-wrap::after { width:240px; height:240px; } }
+.access-copy { max-width:650px; color:#63718a; font-size:18px; font-weight:500; line-height:1.65; letter-spacing:-.05em; margin:24px 0 0; }
+@media (max-width: 880px) { .access-copy { font-size:16px; line-height:1.6; } }
