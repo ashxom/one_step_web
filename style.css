@@ -46,3 +46,12 @@ footer { min-height:170px; padding:45px max(28px,calc((100vw - 1290px)/2)); back
 @media (max-width: 880px) { .problem { min-height:1100px; } }
 .paper { transition:filter 1.8s ease,opacity 1.8s ease,transform 1.8s ease; }
 .problem:has(.clarity-message.is-visible) .paper { filter:blur(4px); opacity:.45; transform:scale(.96); }
+/* Keep every product-story caption legible, including the caption with format pills. */
+.story-caption > p:not(.eyebrow) { color:#b8c4dd; font-size:19px; line-height:1.55; letter-spacing:-.05em; }
+@media (min-width: 881px) { .story-phone { width:290px; top:calc(50% + 38px); } }
+/* The phone is centered by JavaScript and its complete silhouette remains in view. */
+.action-phone-wrap::before,.action-phone-wrap::after { content:""; position:absolute; z-index:0; pointer-events:none; border-radius:50%; border:1px solid #d7e4ff; }
+.action-phone-wrap::before { width:410px; height:410px; left:50%; top:50%; transform:translate(-50%,-50%); }
+.action-phone-wrap::after { width:300px; height:300px; left:50%; top:50%; transform:translate(-50%,-50%); border-color:#e6efff; }
+.action-phone { position:relative; z-index:1; }.orbit { z-index:2; }.orbit-one::before { display:none; }
+@media (max-width: 880px) { .story-caption > p:not(.eyebrow) { font-size:16px; }.action-phone-wrap::before { width:340px; height:340px; }.action-phone-wrap::after { width:240px; height:240px; } }

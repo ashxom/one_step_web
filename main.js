@@ -27,7 +27,7 @@ function updateStory() {
   const index = Math.min(2, Math.floor(progress * 3));
   captions.forEach((caption, i) => caption.classList.toggle('active', i === index));
   panels.forEach((panel, i) => panel.classList.toggle('active', i === index));
-  storyPhone.style.transform = `translateY(${Math.sin(progress * Math.PI) * -8}px) rotate(${(progress - .5) * -2}deg)`;
+  storyPhone.style.transform = `translateY(calc(-50% + ${Math.sin(progress * Math.PI) * -8}px)) rotate(${(progress - .5) * -2}deg)`;
   meter.style.setProperty('--story-progress', `${progress * 100}%`);
   meter.querySelector('.current').textContent = `0${index + 1}`;
 }
