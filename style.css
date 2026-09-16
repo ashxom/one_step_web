@@ -57,3 +57,4 @@ footer { min-height:170px; padding:45px max(28px,calc((100vw - 1290px)/2)); back
 @media (max-width: 880px) { .story-caption > p:not(.eyebrow) { font-size:16px; }.action-phone-wrap::before { width:340px; height:340px; }.action-phone-wrap::after { width:240px; height:240px; } }
 .access-copy { max-width:650px; color:#63718a; font-size:18px; font-weight:500; line-height:1.65; letter-spacing:-.05em; margin:24px 0 0; }
 @media (max-width: 880px) { .access-copy { font-size:16px; line-height:1.6; } }
+@media (min-width: 881px) { .actions .action-layout { margin-top:30px; align-items:start; }.actions .action-text { padding-left:0; padding-top:12px; } }
